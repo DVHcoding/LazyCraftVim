@@ -9,23 +9,15 @@ return {
 		end,
 	},
 	{
-		"nvimdev/dashboard-nvim",
-		event = "VimEnter",
+		"folke/noice.nvim",
 		opts = function(_, opts)
-			local logo = [[
-
-        ███████╗██╗     ██╗   ██╗███████╗███╗   ██╗████████╗███████╗███████╗
-        ██╔════╝██║     ██║   ██║██╔════╝████╗  ██║╚══██╔══╝██╔════╝╚══███╔╝
-        █████╗  ██║     ██║   ██║█████╗  ██╔██╗ ██║   ██║   █████╗    ███╔╝ 
-        ██╔══╝  ██║     ██║   ██║██╔══╝  ██║╚██╗██║   ██║   ██╔══╝   ███╔╝  
-        ██║     ███████╗╚██████╔╝███████╗██║ ╚████║   ██║   ███████╗███████╗
-        ╚═╝     ╚══════╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝╚══════╝
-                                                                    
-                                                                            
-      ]]
-
-			logo = string.rep("\n", 8) .. logo .. "\n\n"
-			opts.config.header = vim.split(logo, "\n")
+			opts.presets.lsp_doc_border = true
 		end,
+	},
+	{
+		"rcarriga/nvim-notify",
+		opts = {
+			timeout = 10000,
+		},
 	},
 }
