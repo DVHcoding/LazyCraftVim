@@ -1,6 +1,13 @@
 return {
 	{
+		"neovim/nvim-lspconfig",
+		opts = {
+			inlay_hints = { enabled = false },
+		},
+	},
+	{
 		"williamboman/mason.nvim",
+		event = { "BufReadPre", "BufNewFile" },
 		opts = function(_, opts)
 			vim.list_extend(opts.ensure_installed, {
 				"stylua",
