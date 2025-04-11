@@ -45,3 +45,6 @@ keymap.set("n", "<C-j>", function() end, opts)
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", opts) -- Toggle nvim-tree
 keymap.set("n", "<leader>n", ":NvimTreeFindFile<CR>", opts) -- Find the current file in nvim-tree
 keymap.set("n", "<leader>f", ":NvimTreeFocus<CR>", opts) -- Focus nvim-tree
+
+-- Paste text origin
+keymap.set("x", "p", '"_dP', { noremap = true })
